@@ -1,4 +1,4 @@
-zypprepo Cookbook
+zypp Cookbook
 =================
 Manage zypp repositories.
 
@@ -7,11 +7,9 @@ This cookbook makes your favorite breakfast sandwhich.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - zypprepo needs toaster to brown your bagel.
+Any recent version of openSUSE/SLES with zypper installed.
+
 
 Attributes
 ----------
@@ -36,15 +34,15 @@ e.g.
 
 Usage
 -----
-#### zypprepo::default
+#### zypp::default
 
-Just include `zypprepo` in your node's `run_list`:
+Just include `zypp` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[zypprepo]"
+    "recipe[zypp]"
   ]
 }
 ```
@@ -60,7 +58,7 @@ params:
   - url - the url of the repository to be added
 
 ```ruby
-zypprepo "cloud" do
+zypp_repo "cloud" do
   url "http://download.opensuse.org/repositories/Cloud:/OpenStack:/Folsom/openSUSE_12.3/"
 end
 ```
@@ -71,7 +69,7 @@ params:
   - url - the url of the repository to be added
 
 ```ruby
-zypprepo "cloud" do
+zypp_repo "cloud" do
   url "http://download.opensuse.org/repositories/Cloud:/OpenStack:/Folsom/openSUSE_12.3/"
   action :create
 end
@@ -81,7 +79,7 @@ end
 
 ```ruby
 # assuming a repository with the "cloud" alias was already added
-zypprepo "cloud" do
+zypp_repo "cloud" do
   action :refresh
 end
 ```
@@ -100,4 +98,7 @@ Contributing
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+
+MIT License
+
+Authors: Ionuț Arțăriși <iartarisi@suse.cz>

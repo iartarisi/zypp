@@ -1,4 +1,4 @@
-name             'zypprepo'
+name             'zypp'
 maintainer       'SUSE Linux'
 maintainer_email 'cloud-devel@suse.de'
 license          'MIT'

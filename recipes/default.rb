@@ -1,4 +1,4 @@
-# Cookbook Name:: zypprepo
+# Cookbook Name:: zypp
 # Recipe:: default
 #
 # Copyright (c) 2013 SUSE LINUX Products GmbH, Nuernberg, Germany.
@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-zypprepo "cloud" do
+zypp_repo "cloud" do
   url "http://download.opensuse.org/repositories/Cloud:/OpenStack:/Folsom/openSUSE_12.3/"
-  action :create
+  action :add
 end
