@@ -56,6 +56,8 @@ All of the actions use the name attribute as the zypper repository name/alias/nu
 
 params:
   - `url` - the url of the repository to be added
+  - `key` - gpg key fingerprint or gpg key URL/file for this repository
+  - `key_server` - gpg keyserver from which to download the gpg key identified by a gpg `key` fingerprint above
 
 ```ruby
 zypp_repo "cloud" do
@@ -67,6 +69,8 @@ end
 
 params:
   - `url` - the url of the repository to be added
+  - `key` - gpg key fingerprint or gpg key URL/file for this repository
+  - `key_server` - gpg keyserver from which to download the gpg key identified by a gpg `key` fingerprint above
 
 ```ruby
 zypp_repo "cloud" do

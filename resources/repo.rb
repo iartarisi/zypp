@@ -13,5 +13,7 @@ actions :add, :create, :refresh
 
 attribute :alias, :kind_of => String, :name_attribute => true
 attribute :url, :kind_of => String
+attribute :key, :kind_of => String
+attribute :keyserver, :kind_of => String
 
 default_action :add
