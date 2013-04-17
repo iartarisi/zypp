@@ -52,10 +52,10 @@ Just include `zypp` in your node's `run_list`:
 All of the actions use the name attribute as the zypper repository name/alias/number.
 
 
-- :add (default action) - adds a new zypper repository (won't do anything if a repository with the same ID is already installed)
+- `:add` (default action) - adds a new zypper repository (won't do anything if a repository with the same ID is already installed)
 
 params:
-  - url - the url of the repository to be added
+  - `url` - the url of the repository to be added
 
 ```ruby
 zypp_repo "cloud" do
@@ -63,10 +63,10 @@ zypp_repo "cloud" do
 end
 ```
 
-- :create adds a new zypper repository - this will fail if a repository with the same ID is already installed
+- `:create` adds a new zypper repository - this will fail if a repository with the same ID is already installed
 
 params:
-  - url - the url of the repository to be added
+  - `url` - the url of the repository to be added
 
 ```ruby
 zypp_repo "cloud" do
@@ -75,7 +75,7 @@ zypp_repo "cloud" do
 end
 ```
 
-- :refresh - refreshes the given repository
+- `:refresh` - refreshes the given repository
 
 ```ruby
 # assuming a repository with the "cloud" alias was already added
