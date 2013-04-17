@@ -37,9 +37,7 @@ e.g.
 Usage
 -----
 #### zypprepo::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `zypprepo` in your node's `run_list`:
 
 ```json
@@ -51,11 +49,48 @@ Just include `zypprepo` in your node's `run_list`:
 }
 ```
 
+### Actions
+
+All of the actions use the name attribute as the zypper repository name/alias/number.
+
+
+- :add (default action) - adds a new zypper repository (won't do anything if a repository with the same ID is already installed)
+
+params:
+  - url - the url of the repository to be added
+
+```ruby
+zypprepo "cloud" do
+  url "http://download.opensuse.org/repositories/Cloud:/OpenStack:/Folsom/openSUSE_12.3/"
+end
+```
+
+- :create adds a new zypper repository - this will fail if a repository with the same ID is already installed
+
+params:
+  - url - the url of the repository to be added
+
+```ruby
+zypprepo "cloud" do
+  url "http://download.opensuse.org/repositories/Cloud:/OpenStack:/Folsom/openSUSE_12.3/"
+  action :create
+end
+```
+
+- :refresh - refreshes the given repository
+
+```ruby
+# assuming a repository with the "cloud" alias was already added
+zypprepo "cloud" do
+  action :refresh
+end
+```
+
+
+
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
