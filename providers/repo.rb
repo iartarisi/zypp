@@ -25,7 +25,7 @@ end
 
 action :create do
   gpg_key new_resource
-  Chef::Log.info "Adding #{new_resource.alias} repository from "+
+  Chef::Log.info "Creating #{new_resource.alias} repository from "+
     "#{new_resource.url}"
 
   execute "zypper addrepo #{new_resource.url} #{new_resource.alias}"
