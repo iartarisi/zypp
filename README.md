@@ -1,36 +1,13 @@
-zypp Cookbook
-=================
-Manage zypp repositories.
+zypp Chef LWRP
+==============
+Chef Lightweight Resource Proivder for managing zypp repositories and repository keys.
 
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
 
 Requirements
 ------------
 
 Any recent version of openSUSE/SLES with zypper installed.
 
-
-Attributes
-----------
-TODO: List you cookbook attributes here.
-
-e.g.
-#### zypprepo::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['zypprepo']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
 
 Usage
 -----
